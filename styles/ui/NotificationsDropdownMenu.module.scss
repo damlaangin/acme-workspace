@@ -1,0 +1,124 @@
+.notifications-popup {
+  position: absolute;
+  top: calc(100% + 0.4rem);
+  right: 0;
+  background-color: white;
+  width: 300px;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.dropdown-menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.dropdown-menu-header {
+  border-bottom: 1px solid var(--border-color);
+  align-items: center;
+}
+
+.badge-primary {
+  background-color: #0c387d;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 8px;
+  margin-right: 8px;
+}
+
+.scrollable-container {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.list-group {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.view-all-btn-container {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.view-all-btn {
+  background-color: var(--dash-content-light);
+  color: var(--dash-background);
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  font-size: 1rem;
+  gap: 0.5rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.view-all-btn:hover {
+  background-color: var(--dash-content-hover);
+  color: white;
+}
+
+.dropdown-notifications-header {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  padding-left: 1rem;
+}
+
+.dropdown-notifications-title {
+  margin-bottom: 0;
+  margin-top: 0;
+  margin-right: auto;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.dropdown-notifications-badge {
+  background-color: #f6f3ee;
+  color: #0c387d;
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.dropdown-notification-heading {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.notifications-btn {
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  padding: 0.5rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  object-fit: cover;
+  justify-content: center;
+}
+
+.notifications-btn:hover {
+  border-radius: 50%;
+  background-color: #f3f3f4;
+}
+
+.loading-text {
+  text-align: center;
+  padding: 0.5rem;
+  color: gray;
+  font-size: 0.9rem;
+}

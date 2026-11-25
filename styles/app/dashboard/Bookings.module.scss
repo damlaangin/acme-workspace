@@ -1,0 +1,697 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.headerText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+
+  h1 {
+    margin: 0;
+    font-size: 2.1rem;
+    font-weight: 500;
+    color: var(--primary-text-color);
+    letter-spacing: -0.01em;
+  }
+
+  p {
+    margin: 0;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: color-mix(in srgb, var(--secondary-text-color) 80%, #ffffff);
+  }
+}
+
+.search {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: nowrap;
+}
+
+.searchBar {
+  width: min(100%, 22rem);
+  display: flex;
+}
+
+.searchInput {
+  border: 1px solid var(--border-color);
+  background: var(--dash-background);
+  min-width: 180px;
+  color: var(--primary-text-color);
+  border-radius: 999px;
+  flex: 1;
+  padding: .6rem 1.4rem;
+  font-size: .9rem;
+}
+
+.filterButton {
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  border: 1px solid var(--primary-text-color);
+  background-color: var(--primary-text-color);
+  color: var(--dash-background);
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
+.filterButton:hover {
+  transform: translateY(-1px);
+}
+
+.filterButton svg {
+  font-size: 1.1rem;
+}
+
+.filterButtonInverted {
+  border: 1px solid var(--border-color);
+  background-color: var(--dash-background);
+  color: var(--primary-text-color);
+}
+
+.filterCount {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.25rem;
+  height: 1.25rem;
+  padding: 0 0.35rem;
+  border-radius: 999px;
+  background-color: var(--dash-content-background);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.filtersModal {
+  max-width: 42rem;
+  background-color: var(--dash-background);
+  border-radius: 1rem;
+  padding: 2rem;
+  gap: 1.5rem;
+}
+
+.columnsModal {
+  max-width: 32rem;
+  background-color: var(--dash-background);
+  border-radius: 1rem;
+  padding: 2rem;
+  gap: 1.5rem;
+}
+
+.columnsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem 1.5rem;
+}
+
+.columnOption {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--primary-text-color);
+  font-size: 0.9rem;
+}
+
+.reservationModal {
+  max-width: 40rem;
+  background-color: var(--dash-background);
+  border-radius: 1rem;
+  padding: 2rem;
+  gap: 1.5rem;
+}
+
+.reservationDetails {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.reservationDetailRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--slate-200);
+  border-radius: 0.75rem;
+  background: var(--dash-foreground);
+  color: var(--gray-900);
+  font-size: 0.95rem;
+}
+
+.reservationField {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+
+  label {
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--slate-400);
+  }
+
+  input,
+  select,
+  textarea {
+    border: 1px solid var(--slate-200);
+    border-radius: 0.75rem;
+    padding: 0.7rem 0.85rem;
+    font-size: 0.95rem;
+    color: var(--gray-900);
+    background: var(--dash-background);
+  }
+
+  input:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+}
+
+.reservationFieldFull {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+
+  label {
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--slate-400);
+  }
+
+  textarea {
+    min-height: 110px;
+    border: 1px solid var(--slate-200);
+    border-radius: 0.75rem;
+    padding: 0.75rem 0.85rem;
+    font-size: 0.95rem;
+    color: var(--gray-900);
+    background: var(--dash-background);
+  }
+}
+
+@media (max-width: 720px) {
+  .reservationDetails {
+    grid-template-columns: 1fr;
+  }
+  .reservationFieldFull {
+    grid-column: auto;
+  }
+}
+.reservationConfirm {
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--slate-200);
+  background: var(--dash-foreground);
+  color: var(--gray-900);
+}
+
+.reservationError {
+  margin: 0;
+  color: #caa458;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.reservationFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+.filtersHeader {
+  text-align: left;
+  gap: 0.35rem;
+}
+
+.filtersHeaderRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.filtersTitle {
+  font-size: 1.35rem;
+  color: var(--gray-900);
+}
+
+.filtersDescription {
+  color: var(--gray-900);
+  font-size: 0.95rem;
+}
+
+.filtersGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.filterGroupWide {
+  grid-column: span 2;
+}
+
+.filterLabel {
+  color: var(--gray-700);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.filterInput {
+  height: 2.5rem;
+  width: 100%;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background-color: var(--dash-foreground);
+  color: var(--primary-text-color);
+  font-size: 0.875rem;
+  font-family: inherit;
+}
+
+.filterInput:focus {
+  outline: none;
+  border-color: var(--border-color);
+  box-shadow: 0 0 0 3px rgba(12, 56, 125, 0.15);
+}
+
+.filterInput::placeholder {
+  color: var(--secondary-text-color);
+}
+
+.datePicker {
+  position: relative;
+  width: 100%;
+}
+
+.searchSelect {
+  position: relative;
+  width: 100%;
+}
+
+.searchSelectMenu {
+  position: absolute;
+  top: calc(100% + 0.35rem);
+  left: 0;
+  right: 0;
+  z-index: 12;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  max-height: 220px;
+  overflow-y: auto;
+  padding: 0.4rem;
+  border-radius: 0.75rem;
+  background-color: var(--dash-background);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.searchSelectOption {
+  text-align: left;
+  padding: 0.5rem 0.6rem;
+  border-radius: 0.5rem;
+  border: none;
+  background: transparent;
+  color: var(--primary-text-color);
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.searchSelectOption:hover {
+  background: var(--dash-content-extra-light);
+}
+
+.searchSelectEmpty {
+  padding: 0.6rem;
+  color: var(--dash-content-light);
+  font-size: 0.85rem;
+}
+
+.datePickerPopover {
+  position: absolute;
+  top: calc(100% + 0.4rem);
+  left: 0;
+  z-index: 10;
+  background-color: var(--dash-background);
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.datePickerActions {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.5rem;
+}
+
+.datePickerClear {
+  border: none;
+  background: none;
+  color: var(--dash-content-background);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.datePickerClear:hover {
+  color: var(--dash-content-hover);
+}
+
+.datePickerPopover :global(.rdp) {
+  --rdp-accent-color: var(--dash-content-background);
+  --rdp-background-color: var(--dash-content-extra-light);
+  font-family: inherit;
+}
+
+.datePickerPopover :global(.rdp-button:hover:not([disabled])) {
+  background-color: var(--dash-content-extra-light);
+}
+
+.filterSelect {
+  height: 2.5rem;
+  width: 100%;
+  border: 1px solid var(--dash-content-disabled);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background-color: var(--dash-foreground);
+  color: var(--dash-content-background);
+  font-size: 0.875rem;
+  font-family: inherit;
+}
+
+.filterSelect:focus {
+  outline: none;
+  border-color: var(--dash-content-background);
+  box-shadow: 0 0 0 3px rgba(12, 56, 125, 0.15);
+}
+
+.sortButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+  vertical-align: middle;
+  color: var(--secondary-text-color);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: .75rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.sortButton:hover {
+  color: var(--dash-content-hover);
+}
+
+.sortIcon {
+  display: inline-flex;
+  align-items: center;
+}
+
+.sortIcon svg {
+  width: 0.9rem;
+  height: 0.9rem;
+}
+
+.filtersFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+.tableCard {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.tableWrapper {
+  width: 100%;
+}
+
+.mobileCards {
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mobileCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid var(--slate-200);
+  background: var(--dash-background);
+  box-shadow: 0 10px 25px rgba(17, 37, 69, 0.08);
+}
+
+.mobileCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.mobileCardGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem 1rem;
+}
+
+.mobileCardItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 0;
+}
+
+.mobileCardLabel {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--slate-500);
+}
+
+.mobileCardValue {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--primary-text-color);
+  word-break: break-word;
+}
+
+.mobileCardStatus {
+  color: var(--dash-content-light);
+  font-size: 0.95rem;
+}
+
+.statusMessage {
+  color: var(--dash-content-light);
+  font-size: 0.9rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.action-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 0.85rem;
+  border: 1px solid var(--border-color);
+  background: transparent;
+  color: var(--primary-text-color);
+  cursor: pointer;
+  transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.action-button:hover {
+  transform: translateY(-1px);
+}
+
+.action-button--neutral:hover {
+  background: color-mix(in srgb, var(--dash-background) 86%, var(--border-color));
+}
+
+.action-button--danger {
+  color: #caa458;
+  border-color: color-mix(in srgb, #caa458 22%, var(--border-color));
+}
+
+.action-button--danger:hover {
+  background: color-mix(in srgb, #caa458 8%, var(--dash-background));
+}
+
+.codeCell {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.codeCellContent {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.45rem;
+}
+
+.copyButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.65rem;
+  height: 1.65rem;
+  border: 1px solid var(--border-color);
+  background-color: var(--dash-foreground);
+  color: var(--secondary-text-color);
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.copyButton:hover {
+  color: var(--primary-text-color);
+  border-color: var(--slate-200);
+}
+
+.copyButton svg {
+  width: 0.9rem;
+  height: 0.9rem;
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  &--completed {
+    background: rgba(34, 197, 94, 0.12);
+    color: #16a34a;
+  }
+
+  &--cancelled {
+    background: rgba(202, 164, 88, 0.12);
+    color: #caa458;
+  }
+
+  &--blocked {
+    background: rgba(155, 163, 177, 0.15);
+    color: #64738b;
+  }
+
+  &--inquiry {
+    background: rgba(202, 164, 88, 0.12);
+    color: #caa458;
+  }
+}
+
+.row--blocked {
+  opacity: 0.55;
+}
+
+.row--cancelled {
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .filterGroup {
+    min-width: 100%;
+  }
+
+  .search {
+    width: 100%;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .searchBar {
+    flex-basis: 100%;
+    width: 100%;
+  }
+
+  .filterButton {
+    flex: 1;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .filtersGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .tableWrapper {
+    display: none;
+  }
+
+  .mobileCards {
+    display: flex;
+  }
+
+  .mobileCardGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .actions {
+    justify-content: flex-end;
+  }
+
+  .reservationModal {
+    width: 100%;
+    max-width: calc(100vw - 2rem);
+    max-height: calc(100vh - 2rem);
+    overflow-y: auto;
+  }
+}

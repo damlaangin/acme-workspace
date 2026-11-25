@@ -1,0 +1,166 @@
+.home__marketPulse-section {
+  border: 1px solid var(--slate-100);
+  border-radius: 2rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--dash-background);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.home__marketPulse-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  &-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+
+    h2 {
+      margin: 0;
+    }
+
+    p {
+      color: var(--secondary-text-color);
+      font-size: 0.95rem;
+    }
+  }
+}
+
+.home__marketPulse-icon {
+  background: var(--slate-450);
+  color: var(--slate-50);
+}
+
+.home__marketPulse-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.home__marketPulse-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  color: var(--secondary-text-color);
+
+  strong {
+    color: var(--primary-color);
+    font-weight: 700;
+  }
+}
+
+.home__marketPulse-progress {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
+  color: var(--primary-text-color);
+
+  div {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  svg {
+    color: var(--primary-color);
+  }
+}
+
+.home__marketPulse-bar {
+  width: 100%;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--slate-100);
+  overflow: hidden;
+
+  span {
+    display: block;
+    height: 100%;
+    background: var(--primary-color);
+    border-radius: 999px;
+  }
+}
+
+.home__marketPulse-subtitle {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  color: var(--secondary-text-color);
+  font-weight: 600;
+}
+
+.home__marketPulse-channel {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  gap: 0.4rem 1rem;
+  align-items: center;
+
+  div:first-child {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+.home__marketPulse-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.home__marketPulse-channelName {
+  font-weight: 300;
+  color: var(--primary-text-color);
+}
+
+.home__marketPulse-channelValue {
+  color: var(--secondary-text-color);
+  font-weight: 400;
+}
+
+.home__marketPulse-channelBar {
+  grid-column: 1 / -1;
+  width: 100%;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--slate-100);
+  overflow: hidden;
+
+  span {
+    display: block;
+    height: 100%;
+    border-radius: 999px;
+  }
+}
+
+.home__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home__marketPulse-section {
+    padding: 1rem;
+  }
+
+  .home__icon {
+    display: none;
+  }
+}

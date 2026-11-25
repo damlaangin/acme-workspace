@@ -1,0 +1,70 @@
+.dropdown-notifications-item {
+  padding: 0.75rem;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  cursor: pointer;
+  position: relative;
+  /* Required for positioning the badge */
+}
+
+.dropdown-notification-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.dropdown-notifications-item:hover {
+  background-color: #f3f3f4;
+  transition: background-color 0.3s;
+}
+
+.avatar {
+  margin-right: 16px;
+  display: flex;
+}
+
+.avatar img,
+.avatar span {
+  width: 3.5rem;
+  height: 3.5rem;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.single-notification {
+  flex-grow: 1;
+}
+
+.notification-title {
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.notification-body {
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 0.75rem;
+  color: #61676b;
+}
+
+.notification-subtitle {
+  font-size: 0.65rem;
+  color: #6c757dc7;
+  margin-bottom: 0;
+  margin-top: 0;
+  text-align: right;
+}
+
+.unread-badge {
+  position: absolute;
+  top: 10px;
+  /* Position the badge at the top */
+  right: 10px;
+  /* Align the badge to the right */
+  width: 10px;
+  height: 10px;
+  background-color: var(--primary-color);
+  /* Use primary color for the unread badge */
+  border-radius: 50%;
+}

@@ -1,0 +1,19 @@
+.emptyLook {
+  border: 1px dashed color-mix(in srgb, var(--border-color) 75%, transparent);
+  border-radius: 18px;
+  padding: 1rem;
+  text-align: center;
+  color: var(--secondary-text-color);
+  background: color-mix(in srgb, var(--dash-foreground) 75%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 120px;
+  width: 100%;
+  grid-column: 1 / -1;
+}
+
+.emptyLookText {
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+}

@@ -1,0 +1,126 @@
+.ai__suggestions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ai__suggestions-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.ai__suggestions-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--secondary-text-color);
+}
+
+.ai__suggestions-grid {
+  display: grid;
+  gap: 1rem;
+  max-height: calc((3 * 190px) + (2 * 1rem));
+  overflow-y: auto;
+  padding-right: 0.35rem;
+}
+
+.ai__suggestion-card {
+  background: var(--dash-background);
+  border-radius: 22px;
+  padding: 1rem;
+  border: 1px solid var(--slate-100);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ai__suggestion-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.ai__suggestion-tag {
+  padding: 0.35rem 0.9rem;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.ai__suggestion-tag--primary {
+  background: color-mix(in srgb, var(--primary-color) 15%, #ffffff);
+  color: var(--primary-color);
+
+  &:hover {
+    background: color-mix(in srgb, var(--primary-hover-color) 18%, #ffffff);
+    color: var(--primary-hover-color);
+  }
+}
+
+.ai__suggestion-tag--secondary {
+  background: color-mix(in srgb, var(--secondary-color) 14%, #ffffff);
+  color: var(--secondary-color);
+
+  &:hover {
+    background: color-mix(in srgb, var(--secondary-hover-color) 18%, #ffffff);
+    color: var(--secondary-hover-color);
+  }
+}
+
+.ai__suggestion-impact {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--slate-400);
+}
+
+.ai__suggestion-text {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--slate-700);
+}
+
+.ai__suggestion-action {
+  border: 1px solid var(--slate-200);
+  background: var(--dash-foreground);
+  color: var(--slate-700);
+  padding: 0.65rem 1rem;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    border-color: var(--slate-300);
+    background: var(--dash-background);
+    color: var(--primary-text-color);
+  }
+}
+
+.ai__section-icon {
+  border-radius: 14px;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  background: var(--slate-450);
+  color: var(--slate-50);
+
+  svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ai__section-icon {
+    display: none;
+  }
+}

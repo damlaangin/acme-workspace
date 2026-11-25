@@ -1,0 +1,12 @@
+.input {
+}
+
+.placeholder {
+  color: var(--secondary-text-color);
+}
+
+
+.input:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}

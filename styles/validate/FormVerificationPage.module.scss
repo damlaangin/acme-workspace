@@ -1,0 +1,76 @@
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0 2rem;
+}
+
+.loader-list {
+  list-style: none;
+  padding: 0;
+}
+
+.loader-container {
+  max-width: 28rem;
+  margin: 0 auto;
+}
+
+.verify-loader {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.loader-wrapper {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--primary-color);
+}
+
+.status-text {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.survey-result-card {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: var(--dash-background);
+  font-family: Arial, sans-serif;
+}
+
+.property-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.property-address {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.user-info {
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+  font-size: 14px;
+  color: #444;
+}
+
+.user-info p {
+  margin: 5px 0;
+}

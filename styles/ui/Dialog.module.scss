@@ -1,0 +1,125 @@
+.dialog-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background-color: rgba(0, 0, 0, 0.8);
+  animation: fade-in 0.2s ease-out;
+}
+
+.dialog-content {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 50;
+  display: grid;
+  width: 100%;
+  max-width: 32rem;
+  transform: translate(-50%, -50%);
+  gap: 1rem;
+  border: 1px solid var(--border-color, var(--slate-200));
+  background-color: var(--dash-background, #ffffff);
+  padding: 1.5rem;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0px 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+  border-radius: 1rem;
+  animation: zoom-in 0.2s ease-out;
+}
+
+.dialog-close {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border-color, var(--slate-200));
+  background-color: var(--dash-foreground, #f7f7f7);
+  color: var(--dash-content-background, var(--slate-700));
+  opacity: 0.95;
+  transition: background-color 0.2s ease, opacity 0.2s ease,
+    border-color 0.2s ease;
+  cursor: pointer;
+}
+
+.dialog-close:hover {
+  opacity: 1;
+  border-color: var(--dash-content-disabled, var(--slate-300));
+  background-color: var(--dash-content-extra-light, rgba(12, 56, 125, 0.1));
+}
+
+.close-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.dialog-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  text-align: center;
+}
+
+.dialog-footer {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+
+.dialog-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+}
+
+.dialog-description {
+  font-size: 0.875rem;
+  color: var(--slate-500);
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoom-in {
+  0% {
+    transform: translate(-50%, -50%) scale(0.95);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@media (min-width: 640px) {
+  .dialog-header {
+    text-align: left;
+  }
+
+  .dialog-footer {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 768px) {
+  .dialog-content {
+    width: 90%;
+    max-width: 90%;
+  }
+
+  .dialog-footer button {
+    margin-top: 0.5rem;
+  }
+}

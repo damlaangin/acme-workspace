@@ -1,0 +1,317 @@
+.ai__override {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ai__override-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ai__override-title {
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--slate-450);
+  margin: 0;
+  font-size: .85rem;
+  font-weight: 600;
+}
+
+.ai__override-add {
+  margin-left: auto;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: var(--slate-100);
+  color: var(--secondary-text-color);
+  font-size: 1.4rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.ai__override-dropdown {
+  position: relative;
+  margin-left: auto;
+}
+
+.ai__override-card {
+  background: var(--dash-background);
+  border-radius: 24px;
+  padding: 1rem;
+  border: 1px solid var(--slate-100);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-height: calc(4 * 96px + 3 * 1rem);
+  overflow-y: auto;
+}
+
+.ai__override-item {
+  background: var(--dash-background);
+  border-radius: 20px;
+  padding: 1rem;
+  border: 1px solid var(--slate-100);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 96px;
+}
+
+.ai__override-main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.ai__override-type {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--slate-400);
+}
+
+.ai__override-property {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--primary-text-color);
+}
+
+.ai__override-issue {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--primary-color);
+}
+
+.ai__override-meta {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--slate-400);
+}
+
+.ai__override-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.ai__override-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  border: 1px solid var(--slate-200);
+  background: var(--dash-background);
+  color: var(--slate-400);
+  font-size: 1rem;
+  cursor: pointer;
+
+  &:hover {
+    background: var(--primary-text-color);
+    border-color: var(--primary-text-color);
+    color: var(--dash-background);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.ai__override-btn--play {
+  color: var(--secondary-color);
+  border-color: color-mix(in srgb, var(--secondary-color) 40%, #ffffff);
+
+  &:hover {
+    background: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: var(--dash-background);
+  }
+}
+
+.ai__override-modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(17, 37, 69, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  z-index: 40;
+}
+
+.ai__override-modalCard {
+  width: min(460px, 100%);
+  background: var(--dash-background);
+  border-radius: 20px;
+  border: 1px solid var(--slate-100);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.ai__override-modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.ai__override-modalTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--primary-text-color);
+}
+
+.ai__override-modalClose {
+  border: 1px solid var(--slate-100);
+  background: transparent;
+  color: var(--secondary-text-color);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.ai__override-modalBody {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ai__override-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ai__override-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--secondary-text-color);
+}
+
+.ai__override-select,
+.ai__override-input {
+  width: 100%;
+  border: 1px solid var(--slate-100);
+  border-radius: 12px;
+  padding: 0.65rem 0.75rem;
+  background: var(--dash-background);
+  color: var(--primary-text-color);
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.ai__override-input::placeholder {
+  color: var(--slate-400);
+}
+
+.ai__override-searchSelect {
+  position: relative;
+}
+
+.ai__override-searchSelect .ai__override-input {
+  border-color: color-mix(in srgb, var(--secondary-color) 30%, var(--slate-100));
+  border-radius: 16px;
+  padding: 0.75rem 1rem;
+}
+
+.ai__override-searchSelect .ai__override-input:focus {
+  border-color: var(--secondary-color);
+}
+
+.ai__override-searchMenu {
+  margin-top: 0.5rem;
+  border: 1px solid color-mix(in srgb, var(--secondary-color) 30%, var(--slate-100));
+  border-radius: 16px;
+  background: var(--dash-background);
+  max-height: 240px;
+  overflow-y: auto;
+  padding: 0.4rem 0;
+}
+
+.ai__override-searchOption {
+  width: 100%;
+  border: none;
+  background: transparent;
+  text-align: left;
+  padding: 0.65rem 1rem;
+  color: color-mix(in srgb, var(--secondary-color) 75%, var(--primary-text-color));
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.ai__override-searchOption:hover {
+  background: color-mix(in srgb, var(--secondary-color) 10%, transparent);
+}
+
+.ai__override-searchEmpty {
+  padding: 0.65rem 1rem;
+  color: var(--secondary-text-color);
+  font-size: 0.95rem;
+}
+
+.ai__override-modalFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+.ai__override-modalCancel {
+  border: 1px solid var(--slate-100);
+  background: transparent;
+  color: var(--secondary-text-color);
+  border-radius: 999px;
+  padding: 0.6rem 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.ai__override-modalSubmit {
+  border: none;
+  background: var(--primary-text-color);
+  color: var(--dash-background);
+  border-radius: 999px;
+  padding: 0.6rem 1.4rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.ai__section-icon {
+  border-radius: 14px;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  background: var(--slate-450);
+  color: var(--slate-50);
+
+  svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ai__override-card {
+    background: none;
+    border: none;
+    gap: 0.5rem;
+    padding: 0;
+  }
+
+  .ai__section-icon {
+    display: none;
+  }
+}

@@ -1,0 +1,137 @@
+.table-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+/* === LEFT SIDE === */
+.rows-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.row-count {
+  font-size: 0.85rem;
+  color: var(--slate-600);
+}
+
+.row-limit {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--slate-600);
+}
+
+.columns-toggle {
+  border-radius: 0.25rem;
+  padding: 0.1rem 0.25rem;
+  margin: 0 0.25rem;
+  width: fit-content;
+  font-family: inherit;
+  background-color: transparent;
+  color: var(--dash-content-background);
+  border: 2px solid var(--dash-content-background);
+}
+
+.columns-toggle:hover {
+  color: var(--dash-background);
+  background-color: var(--dash-content-light);
+  cursor: pointer;
+}
+
+/* === RIGHT SIDE === */
+.pagination {
+  display: flex;
+  align-items: center;
+  background-color: var(--dash-content-extra-light);
+  border-radius: 2rem;
+  padding: 4px 8px;
+  gap: 0.5rem;
+}
+
+.page-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  color: var(--dash-content-background);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.page-arrow:hover:not(.disabled) {
+  transform: translateY(-1px);
+}
+
+.page-arrow.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.page-list {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.page-number {
+  border: none;
+  background: transparent;
+  color: var(--slate-700);
+  border-radius: 50%;
+  font-size: 14px;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.page-number:hover {
+  transform: translateY(-1px);
+  cursor: pointer;
+}
+
+.page-number.active {
+  background-color: var(--dash-content-background);
+  color: white;
+  font-weight: 600;
+}
+
+.page-ellipsis {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--slate-500);
+  font-weight: 600;
+  user-select: none;
+}
+
+@media (max-width: 768px) {
+  .table-footer {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .pagination {
+    justify-content: center;
+  }
+
+  .rows-info {
+    justify-content: center;
+  }
+}

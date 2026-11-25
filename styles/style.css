@@ -1,0 +1,91 @@
+/* ./styles/RootLayoutStyles.module.scss */
+
+/* Additional styles */
+@import "./additional-styles/utility-patterns.css";
+@import "./additional-styles/range-slider.css";
+@import "./additional-styles/toggle-switch.css";
+@import "./additional-styles/theme.css";
+
+/* Global Styles */
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: white;
+  color: #112545;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* Utility classes replacement */
+
+.rtl {
+  direction: rtl;
+}
+
+.disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 7px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background: #caa458;
+  border-radius: 6px;
+}
+
+.scrollbar::-webkit-scrollbar-button {
+  display: none;
+}
+
+.overflow-y-scroll {
+  overflow-y: scroll;
+}
+
+.max-h-80 {
+  max-height: 80vh;
+}
+
+/* Additional global styles */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-clip {
+  overflow: clip;
+}
+
+.tracking-tight {
+  letter-spacing: -0.01562em;
+}
+
+/* Font setup */
+.font-inter {
+  font-family: var(--font-inter);
+}

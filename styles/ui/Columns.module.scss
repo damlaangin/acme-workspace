@@ -1,0 +1,201 @@
+.text-right {
+  text-align: right;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.profile-image-container {
+  display: flex;
+  align-items: center;
+  padding: 0.25rem;
+}
+
+.icon-cell {
+  width: 5.25rem;
+  min-width: 5.25rem;
+  max-width: 5.25rem;
+}
+
+.profile-image {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.more-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2rem;
+  width: 2rem;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+}
+
+.more-btn:hover {
+  background-color: var(--table-row-hover);
+  cursor: pointer;
+}
+
+.icon-size {
+  height: 1rem;
+  width: 1rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.btn-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  width: 100%;
+  border: 1px solid transparent;
+  background-color: transparent;
+  transition: border 0.2s, color 0.2s;
+  color: inherit;
+}
+
+.btn-header:hover {
+  color: var(--dash-content-hover);
+  cursor: pointer;
+}
+
+.thin {
+  max-width: 0.1rem;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.82rem;
+  background: color-mix(in srgb, var(--pill-color) 14%, var(--dash-background));
+  color: var(--pill-color);
+}
+
+.status-pill[data-variant="success"] {
+  --pill-color: var(--success-dark);
+}
+
+.status-pill[data-variant="danger"] {
+  --pill-color: var(--primary-color);
+}
+
+.user-type-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: color-mix(in srgb, var(--type-color) 12%, var(--dash-background));
+  color: var(--type-color);
+}
+
+.user-type-pill[data-variant="primary"] {
+  --type-color: var(--primary-color);
+}
+
+.user-type-pill[data-variant="secondary"] {
+  --type-color: var(--secondary-color);
+}
+
+.user-type-pill[data-variant="accent"] {
+  --type-color: var(--accent-color);
+}
+
+.user-type-pill[data-variant="secondary-hover"] {
+  --type-color: var(--secondary-hover-color);
+}
+
+.action-buttons {
+  gap: 0.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: max-content;
+}
+
+.action-cell {
+  white-space: nowrap !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  min-width: 15rem;
+}
+
+.no-ellipsis {
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+}
+.email-ellipsis {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cell-ellipsis {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cell-readable {
+  display: block;
+  max-width: 100%;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.edit-button, 
+.delete-button,
+.invite-button {
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--primary-text-color);
+
+  &:hover {
+    border-color: var(----primary-text-color);
+  }
+}

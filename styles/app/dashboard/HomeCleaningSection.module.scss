@@ -1,0 +1,253 @@
+.home__cleaning-section {
+  border: 1px solid var(--slate-100);
+  border-radius: 2rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--dash-background);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.home__cleaning-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.home__cleaning-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  &-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+
+    h2 {
+      margin: 0;
+    }
+
+    p {
+      color: var(--secondary-text-color);
+      font-size: 0.95rem;
+    }
+  }
+}
+
+.home__cleaning-icon {
+  background: var(--slate-450);
+  color: var(--slate-50);
+}
+
+.home__cleaning-stats {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.home__cleaning-stat {
+  border: 1px solid var(--slate-100);
+  border-radius: 1.25rem;
+  padding: 0.65rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 140px;
+
+  span {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.7rem;
+    color: var(--secondary-text-color);
+    font-weight: 600;
+  }
+
+  strong {
+    font-size: 1.1rem;
+    color: var(--primary-text-color);
+  }
+}
+
+.home__cleaning-tableWrap {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.home__cleaning-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+
+  tbody {
+    display: block;
+    max-height: 372px;
+    overflow-y: auto;
+    scrollbar-gutter: stable;
+  }
+
+  tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  td {
+    padding: 0.5rem 0;
+    vertical-align: middle;
+    background: var(--dash-background);
+  }
+
+  td:last-child {
+    text-align: right;
+    width: 160px;
+  }
+}
+
+.home__cleaning-person {
+  display: flex;
+  align-items: center;
+}
+
+.home__cleaning-name {
+  margin: 0;
+  font-weight: 400;
+  color: var(--primary-text-color);
+}
+
+.home__cleaning-role {
+  color: var(--secondary-text-color);
+  font-size: 0.9rem;
+}
+
+.home__cleaning-property {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.home__cleaning-propertyImage {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--slate-100);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.home__cleaning-propertyName {
+  margin: 0;
+  font-weight: 500;
+  color: var(--primary-text-color);
+}
+
+.home__cleaning-time {
+  color: var(--secondary-text-color);
+  font-size: 0.9rem;
+}
+
+.home__cleaning-status {
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  font-weight: 500;
+  font-size: 0.85rem;
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+
+  &--approved {
+    background: var(--success-light);
+    color: var(--success-dark);
+  }
+
+  &--pending {
+    background: color-mix(in srgb, var(--warning) 20%, transparent);
+    color: var(--warning);
+  }
+
+  &--progress {
+    background: color-mix(in srgb, var(--secondary-color) 14%, transparent);
+    color: var(--secondary-color);
+  }
+
+  &--declined {
+    background: color-mix(in srgb, var(--destructive) 15%, transparent);
+    color: var(--destructive);
+  }
+}
+
+.home__cleaning-action {
+  border: none;
+  background: #1f1f1f;
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.home__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .home__cleaning-table {
+    border-spacing: 0 0.75rem;
+
+    td {
+      padding: 0.85rem 1rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .home__cleaning-section {
+    padding: 1rem;
+  }
+
+  .home__icon {
+    display: none;
+  }
+
+  .home__cleaning-status {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 300;
+  }
+
+  .home__cleaning-action {
+    padding: 0.25rem 0.75rem;
+    font-weight: 300;
+  }
+
+  .home__cleaning-propertyImage {
+    display: none;
+
+    img {
+      display: none;
+    }
+  }
+
+  .home__cleaning-stats {
+    justify-content: space-between;
+    width: 100%;
+  }
+}

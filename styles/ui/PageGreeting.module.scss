@@ -1,0 +1,45 @@
+.pageGreeting {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.pageGreetingTitle {
+  margin: 0;
+  max-height: 5rem;
+  opacity: 1;
+  overflow: hidden;
+  transform: translateY(0);
+  transition:
+    transform 0.55s ease,
+    opacity 0.4s ease,
+    max-height 0.4s ease,
+    margin 0.4s ease;
+}
+
+.pageGreetingTitleExit {
+  margin: 0;
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-1.5rem);
+}
+
+.pageGreetingHeadline {
+  margin: 0;
+}
+
+.pageGreetingSubtitle {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .pageGreeting {
+    gap: 0.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pageGreetingTitle {
+    transition: none;
+  }
+}

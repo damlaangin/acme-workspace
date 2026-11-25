@@ -1,0 +1,35 @@
+.option {
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.option:hover {
+  background-color: #f3f3f4;
+}
+
+.option-text {
+  font-family: inherit;
+  overflow: hidden;
+}
+
+.option-icon {
+  margin-right: 0.75rem;
+}
+
+.badge-danger {
+  background-color: #caa458;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+}
+
+@media (max-width: 450px) {
+  .option-text {
+    font-size: 0.75rem;
+  }
+}

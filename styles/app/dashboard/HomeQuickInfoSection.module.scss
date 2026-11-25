@@ -1,0 +1,238 @@
+.homeQuickInfo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1rem;
+}
+
+.homeQuickInfoCard {
+  background: var(--dash-background);
+  border-radius: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--slate-100);
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  container-type: inline-size;
+}
+
+.homeQuickInfoLabel {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--slate-450);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.homeQuickInfoValue {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--primary-text-color);
+}
+
+.homeQuickInfoValueRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.homeQuickInfoValueRowInline .homeQuickInfoTrendIcon {
+  margin-left: auto;
+}
+
+.homeQuickInfoValueList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.homeQuickInfoValueLine {
+  display: grid;
+  grid-template-columns: 3.25rem minmax(0, 1fr);
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.homeQuickInfoValueLineContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.homeQuickInfoValueLine .homeQuickInfoTrendIcon {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.homeQuickInfoValueCode {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--slate-450);
+  flex-shrink: 0;
+  white-space: nowrap;
+  width: 3.25rem;
+}
+
+.homeQuickInfoValueAmount {
+  font-size: 1.5rem;
+  font-weight: 300;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+  color: inherit;
+  min-width: 0;
+  white-space: nowrap;
+  justify-self: start;
+  line-height: 1;
+  overflow: visible;
+  text-overflow: unset;
+  max-width: none;
+  padding-right: 0.08em;
+}
+
+.homeQuickInfoMeta {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.homeQuickInfoTrendIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  line-height: 1;
+  color: var(--success-dark);
+}
+
+@media (max-width: 1280px) {
+  .homeQuickInfoLabel {
+    font-size: 0.7rem;
+  }
+
+  .homeQuickInfoValue {
+    font-size: 1.75rem;
+  }
+
+  .homeQuickInfoValueCode {
+    font-size: 0.72rem;
+  }
+
+  .homeQuickInfoValueAmount {
+    font-size: 1.25rem;
+  }
+
+  .homeQuickInfoTrendIcon {
+    font-size: 0.92rem;
+  }
+
+  .homeQuickInfoValueLine {
+    width: 100%;
+    gap: 0.35rem;
+  }
+}
+
+.homeQuickInfoPillDown {
+  color: var(--destructive);
+}
+
+.homeQuickInfoPillUp {
+  color: var(--success-dark);
+}
+
+.homeQuickInfoPillStable {
+  color: var(--slate-450);
+}
+
+.homeQuickInfoCardActive {
+  background: linear-gradient(
+    140deg,
+    var(--primary-color) 0%,
+    var(--primary-hover-color) 100%
+  );
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 15px 18px color-mix(in srgb, var(--primary-hover-color) 50%, transparent);
+}
+
+.homeQuickInfoCardActive .homeQuickInfoLabel,
+.homeQuickInfoCardActive .homeQuickInfoValue {
+  color: #fff;
+}
+
+.homeQuickInfoCardOccupancy .homeQuickInfoValue {
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.homeQuickInfoCardActive .homeQuickInfoValueCode {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.homeQuickInfoCardActive .homeQuickInfoTrendIcon {
+  color: #fff;
+}
+
+.homeQuickInfoCardActive .homeQuickInfoPillStable {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .homeQuickInfo {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+  }
+
+  .homeQuickInfoCard {
+    flex-direction: column;
+    gap: 0.4rem;
+    min-height: unset;
+    padding: 0.75rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .homeQuickInfoCardActive {
+    grid-column: span 2;
+    box-shadow: none;
+  }
+
+  .homeQuickInfoCardActive .homeQuickInfoLabel {
+    color: #fff;
+  }
+
+  .homeQuickInfoLabel {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--slate-450);
+    font-size: 0.75rem;
+    font-weight: 700;
+    align-self: center;
+  }
+
+  .homeQuickInfoValue {
+    font-weight: 300;
+  }
+
+  .homeQuickInfoValueList {
+    font-size: 0.95rem;
+    gap: 0.2rem;
+    width: 100%;
+  }
+
+  .homeQuickInfoValueAmount {
+    font-size: 1rem;
+  }
+
+  .homeQuickInfoMeta {
+    margin-top: unset;
+  }
+
+  .homeQuickInfoCardOccupancy .homeQuickInfoValue {
+    font-size: 1.5rem;
+  }
+}

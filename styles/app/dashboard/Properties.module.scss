@@ -1,0 +1,15 @@
+/* Properties.module.scss */
+
+.properties_content {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+@media (max-width: 768px) {
+  .properties_content {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: .5rem;
+  }
+}
